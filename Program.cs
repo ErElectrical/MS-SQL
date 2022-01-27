@@ -26,7 +26,10 @@ namespace Employee_Payroll
             temp.Deducations = 150;
             temp.Phonenumber = "356642235";
 
-            emp.AddEmployee( temp);
+           // emp.AddEmployee( temp);
+
+            GetDataBetweenDatecs inst = new GetDataBetweenDatecs();
+            inst.GetDataDates();
 
         }
     }
