@@ -12,19 +12,19 @@ namespace Employee_Payroll
 
             EmployeePayrollModel temp = new EmployeePayrollModel();
 
-            EmployeePayrollModel.EmployeeName = "moke";
-            EmployeePayrollModel.Country = "india";
-            EmployeePayrollModel.state = "maharastra";
-            EmployeePayrollModel.stratdate = DateTime.Today;
-            EmployeePayrollModel.Department = "engg";
-            EmployeePayrollModel.gender = "male";
-            EmployeePayrollModel.Address = "Junu okhkla";
-            EmployeePayrollModel.Tax = 129;
-            EmployeePayrollModel.basicPay = 12000;
-            EmployeePayrollModel.TaxPay = 100;
-            EmployeePayrollModel.NetPay = 11500;
-            EmployeePayrollModel.Deducations = 150;
-            EmployeePayrollModel.Phonenumber = "356642235";
+            temp.EmployeeName = "moke";
+            temp.Country = "india";
+            temp.state = "maharastra";
+            temp.stratdate = DateTime.Today;
+            temp.Department = "engg";
+            temp.gender = "male";
+            temp.Address = "Junu okhkla";
+            temp.Tax = 129;
+            temp.basicPay = 12000;
+            temp.TaxPay = 100;
+            temp.NetPay = 11500;
+            temp.Deducations = 150;
+            temp.Phonenumber = "356642235";
 
             emp.AddEmployee( temp);
 
