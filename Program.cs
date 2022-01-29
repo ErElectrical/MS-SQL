@@ -31,6 +31,8 @@ namespace Employee_Payroll
             GetDataBetweenDatecs inst = new GetDataBetweenDatecs();
             inst.GetDataDates();
 
+            emp.Uccases();
+
         }
     }
 }
