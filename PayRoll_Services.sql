@@ -34,6 +34,33 @@ values
 select Startdate,Emp_PhoneNumber,Emp_Address,Dept_Name,state_belong,Country,BasicPay,Deducations,TaxPay,IncomeTax,NetPay,gender,Emp_Name
 from Employee_Pay;
 
+create proc SPhelpInserting
+(
+
+	@EmployeeName varchar(30),
+	@Phonenumber varchar(15),
+	@Startdate date,
+	@Emp_Address varchar(15),
+	@Dept_Name varchar(15),
+	@state_belong varchar(20),
+	@Country varchar(20),
+	@BasicPay int,
+	@Deducations int,
+	@TaxPay int,
+	@IncomeTax int,
+	@NetPay int,
+	@gender varchar(10)
+	
+)
+as 
+begin 
+insert into Employee_Pay values(@Startdate,@PhoneNumber,@Emp_Address,@Dept_Name,@state_belong,@Country,@BasicPay,@Deducations,@TaxPay,@IncomeTax,@NetPay,@gender,@EmployeeName)
+end
+go
+
+select * from Employee_Pay;
+
+
 
 
 
