@@ -57,20 +57,6 @@ namespace Employee_Payroll
                             Console.WriteLine("{0}{1}{2}{3}{4}{5}{6}", model.EmployeeId, model.EmployeeName, model.stratdate, model.Phonenumber, model.NetPay, model.state, model.TaxPay);
                             Console.WriteLine("\n");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         }
                     }
                     else
@@ -144,14 +130,6 @@ namespace Employee_Payroll
                     {
                         Console.WriteLine("insertion occur");
                     }
-                    
-
-
-
-
-
-
-
 
                 }
               
@@ -167,6 +145,34 @@ namespace Employee_Payroll
                 this.connection.Close();
             }
 
+        }
+
+        public void Uccases()
+        {
+            try
+            {
+                using(this.connection)
+                {
+                    Sqlcommand cmd = new Sqlcommand("UccasesHelp", this.connection);
+                    cmd.commandtype = System.Data.CommandType.StoredProcedure;
+                    this.connection.Open();
+                    SqlDataReader record = cmd.ExecuteReader();
+                    if(record.HasRows)
+                    {
+                        Console.WriteLine("\n 1. sum of salary male and female " +
+                            "\n 2. max of salary male or female " +
+                            "\n 3. min of slary male and female" +
+                            "\n 4. count of male and female");
+                        while(record.Read())
+                        {
+                            Console.WriteLine(record);
+                            Console.WriteLine();
+                        }
+                    }
+
+
+                }
+            }
         }
     }
 }
